@@ -8,31 +8,28 @@
     <div class="container">
         <div class="row mt-3">
             <div class="col-4">
-                <h3>Tambah Data Pasien</h3>
+                <h3>Tambah Data Obat</h3>
                 <form action="koneksi.php" method="POST">
                     <div class="form-group">
-                        <label for="idpasien">ID Pasien</label>
+                        <label for="idpasien">ID Obat</label>
                         <input type="text" class="form-control mb-3" name="idpasien" placeholder="ID Pasien">
                     </div>
                     <div class="form-group">
-                        <label for="nmpasien">Nama Pasien</label>
+                        <label for="nmpasien">Nama Obat</label>
                         <input type="text" class="form-control mb-3" name="nmpasien" placeholder="Nama Pasien">
                     </div>
                     <div class="form-group">
-                        <label for="jk">Jenis Kelamin</label>
+                        <label for="jk">Jenis Obat</label>
                         <div class="form-check">
-                            <input type="radio" class="form-check-input" name="jk" value="Perempuan" id="perempuan">
-                            <label class="form-check-label" for="perempuan">Perempuan</label>
+                            <input type="radio" class="form-check-input" name="jk" value="Semua Umur" id="Semua Umur">
+                            <label class="form-check-label" for="Semua Umur">Semua Umur</label>
                         </div>
                         <div class="form-check">
-                            <input type="radio" class="form-check-input" name="jk" value="Laki-laki" id="laki-laki">
-                            <label class="form-check-label" for="laki-laki">Laki-laki</label>
+                            <input type="radio" class="form-check-input" name="jk" value="Khusus Dewasa" id="Khusus Dewasa">
+                            <label class="form-check-label" for="Khusus Dewasa">Khusus Dewasa</label>
                         </div>
                     </div>
-                    <div class="form-group mt-3">
-                        <label for="alamat">Alamat</label>
-                        <textarea name="alamat" id="alamat" cols="5" rows="3" placeholder="Alamat" class="form-control"></textarea>
-                    </div>
+                    
                     <div class="form-group mt-3">
                         <input type="submit" name="simpan" value="Simpan" class="form-control btn btn-primary">
                     </div>

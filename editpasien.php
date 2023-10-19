@@ -6,7 +6,7 @@
     <body>
         <div class="container">
             <div class="row mt-3">
-                <h3>Edit Pasien</h3>
+                <h3>Edit Obat</h3>
                 <?php
                 include 'koneksi.php';
                 $panggil = $koneksi->query ("SELECT * FROM pasien where idpasien = '$_GET[edit]'");
@@ -15,31 +15,28 @@
                     ?>
                 <form action = "koneksi.php" method="POST">
                     <div class="form-group">
-                        <label for="idpasien">ID Pasien</label>
+                        <label for="idpasien">ID Obat</label>
                         <input type="text" class="form-control mb-3" name="idpasien" placeholder="ID Pasien" value="<?= $row['idpasien'] ?>" readonly>
                     </div>
                     <div class="form-group">
-                        <label for="nmpasien">Nama Pasien</label>
+                        <label for="nmpasien">Nama Obat</label>
                         <div class="form-check">
                             <input type="text" class="form-control mb-3" name="nmpasien" placeholder="Nama Pasien" value="<?= $row['nmpasien'] ?>">
                         </div>
                         <div class="form-group">
-                            <label for="jk">Jenis Kelamin</label>
+                            <label for="jk">Jenis Obat</label>
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" name="jk" value="Perempuan" <?php if (($row['jk']) === "Perempuan") {
+                                <input type="radio" class="form-check-input" name="jk" value="Semua Umur" <?php if (($row['jk']) === "Semua Umur") {
                                     echo "checked";
-                                } ?>> Perempuan
+                                } ?>> Semua Umur
                             </div>
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" name="jk" value="Laki-laki" <?php if (($row['jk']) === "Laki-laki") {
+                                <input type="radio" class="form-check-input" name="jk" value="Khusus Dewasa" <?php if (($row['jk']) === "Khusus Dewasa") {
                                     echo "checked";
-                                } ?>> Laki-laki
+                                } ?>> Khusus Dewasa
                             </div>
                         </div>
-                        <div class="form-group mt-3">
-                            <label for="alamat">Alamat</label>
-                            <textarea class="form-control" name="alamat" id="alamat" cols="5" rows="3" placeholder="Alamat"<?= $row['alamat'] ?>></textarea>
-                        </div>
+                        
                         <div class="form-group mt-3">
                             <input type="submit" name="edit" value="Simpan" class="form-control btn btn-primary">
                         </div>

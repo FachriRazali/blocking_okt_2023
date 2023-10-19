@@ -1,5 +1,5 @@
 <?php
-$koneksi = new mysqli('localhost', 'root', '', 'fachri')
+$koneksi = new mysqli('localhost', 'root', '', 'apotik')
 or die(mysqli_error($koneksi));
 
 if(isset($_POST['simpan'])) {
